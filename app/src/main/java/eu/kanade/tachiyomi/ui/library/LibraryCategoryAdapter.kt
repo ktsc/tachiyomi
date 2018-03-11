@@ -41,4 +41,8 @@ class LibraryCategoryAdapter(view: LibraryCategoryView) :
         updateDataSet(mangas.filter { it.filter(searchText) })
     }
 
+    fun count(): Int {
+        return mangas.size
+    }
+
 }

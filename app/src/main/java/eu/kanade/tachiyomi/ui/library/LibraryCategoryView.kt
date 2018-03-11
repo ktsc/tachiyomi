@@ -94,6 +94,7 @@ class LibraryCategoryView @JvmOverloads constructor(context: Context, attrs: Att
             if (!LibraryUpdateService.isRunning(context)) {
                 LibraryUpdateService.start(context, category)
                 context.toast(R.string.updating_category)
+
             }
             // It can be a very long operation, so we disable swipe refresh and show a toast.
             swipe_refresh.isRefreshing = false
@@ -242,6 +243,10 @@ class LibraryCategoryView @JvmOverloads constructor(context: Context, attrs: Att
 
         controller.setSelection(item.manga, !adapter.isSelected(position))
         controller.invalidateActionMode()
+    }
+
+    fun getMangaCount() : Int {
+        return adapter.count()
     }
 
 }

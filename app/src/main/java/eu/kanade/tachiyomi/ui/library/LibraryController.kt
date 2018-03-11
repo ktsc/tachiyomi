@@ -7,11 +7,13 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.graphics.drawable.DrawableCompat
+import android.support.v4.view.ViewPager
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.SearchView
 import android.view.*
+import android.widget.Toast
 import com.bluelinelabs.conductor.ControllerChangeHandler
 import com.bluelinelabs.conductor.ControllerChangeType
 import com.f2prateek.rx.preferences.Preference
@@ -155,6 +157,19 @@ class LibraryController(
         if (selectedMangas.isNotEmpty()) {
             createActionModeIfNeeded()
         }
+        library_pager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+
+            }
+
+            override fun onPageSelected(position: Int) {
+                Toast.makeText(applicationContext, "Current manga count: ${adapter?.getMangaCount(position)}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     override fun onChangeStarted(handler: ControllerChangeHandler, type: ControllerChangeType) {

@@ -28,6 +28,8 @@ class LibraryAdapter(private val controller: LibraryController) : RecyclerViewPa
 
     private var boundViews = arrayListOf<View>()
 
+    private var allViews = HashMap<Int, View>()
+
     /**
      * Creates a new view for this adapter.
      *
@@ -48,6 +50,7 @@ class LibraryAdapter(private val controller: LibraryController) : RecyclerViewPa
     override fun bindView(view: View, position: Int) {
         (view as LibraryCategoryView).onBind(categories[position])
         boundViews.add(view)
+        allViews[position] = view
     }
 
     /**
@@ -100,4 +103,10 @@ class LibraryAdapter(private val controller: LibraryController) : RecyclerViewPa
         }
     }
 
+    fun getMangaCount(position: Int) : Int{
+        if(allViews.containsKey(position)) {
+            return (allViews.get(position) as LibraryCategoryView).getMangaCount()
+        }
+        return -1
+    }
 }
