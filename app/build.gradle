@@ -38,8 +38,8 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        versionCode 36
-        versionName "0.7.3"
+        versionCode 37
+        versionName "0.7.4"
 
         buildConfigField "String", "COMMIT_COUNT", "\"${getCommitCount()}\""
         buildConfigField "String", "COMMIT_SHA", "\"${getGitSha()}\""
@@ -120,7 +120,7 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.2'
 
-    standardImplementation 'com.google.firebase:firebase-core:12.0.1'
+    standardImplementation 'com.google.firebase:firebase-core:11.8.0'
 
     // ReactiveX
     implementation 'io.reactivex:rxandroid:1.2.1'
@@ -130,7 +130,7 @@ dependencies {
     implementation 'com.github.pwittchen:reactivenetwork:0.7.0'
 
     // Network client
-    implementation "com.squareup.okhttp3:okhttp:3.9.1"
+    implementation "com.squareup.okhttp3:okhttp:3.10.0"
     implementation 'com.squareup.okio:okio:1.14.0'
 
     // REST
@@ -154,8 +154,8 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.10.2'
 
     // Job scheduling
-    implementation 'com.evernote:android-job:1.2.4'
-    implementation 'com.google.android.gms:play-services-gcm:12.0.1'
+    implementation 'com.evernote:android-job:1.2.5'
+    implementation 'com.google.android.gms:play-services-gcm:11.8.0'
 
     // Changelog
     implementation 'com.github.gabrielemariotti.changeloglib:changelog:2.1.0'
