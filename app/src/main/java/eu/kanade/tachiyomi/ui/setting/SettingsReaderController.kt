@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.ui.setting
 
+import android.os.Build
 import android.support.v7.preference.PreferenceScreen
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
@@ -55,20 +56,17 @@ class SettingsReaderController : SettingsController() {
             summary = "%s"
         }
         intListPreference {
-            key = Keys.imageDecoder
-            titleRes = R.string.pref_image_decoder
-            entries = arrayOf("Image", "Rapid", "Skia")
-            entryValues = arrayOf("0", "1", "2")
-            defaultValue = "0"
-            summary = "%s"
-        }
-        intListPreference {
             key = Keys.doubleTapAnimationSpeed
             titleRes = R.string.pref_double_tap_anim_speed
             entries = arrayOf(context.getString(R.string.double_tap_anim_speed_0), context.getString(R.string.double_tap_anim_speed_fast), context.getString(R.string.double_tap_anim_speed_normal))
             entryValues = arrayOf("1", "250", "500") // using a value of 0 breaks the image viewer, so min is 1
             defaultValue = "500"
             summary = "%s"
+        }
+        switchPreference {
+            key = Keys.skipRead
+            titleRes = R.string.pref_skip_read_chapters
+            defaultValue = false
         }
         switchPreference {
             key = Keys.fullscreen
@@ -84,6 +82,13 @@ class SettingsReaderController : SettingsController() {
             key = Keys.showPageNumber
             titleRes = R.string.pref_show_page_number
             defaultValue = true
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            switchPreference {
+                key = Keys.trueColor
+                titleRes = R.string.pref_true_color
+                defaultValue = false
+            }
         }
         preferenceCategory {
             titleRes = R.string.pager_viewer
@@ -114,6 +119,11 @@ class SettingsReaderController : SettingsController() {
             switchPreference {
                 key = Keys.readWithTapping
                 titleRes = R.string.pref_read_with_tapping
+                defaultValue = true
+            }
+            switchPreference {
+                key = Keys.readWithLongTap
+                titleRes = R.string.pref_read_with_long_tap
                 defaultValue = true
             }
             switchPreference {

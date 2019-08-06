@@ -29,9 +29,9 @@ class SettingsGeneralController : SettingsController() {
         listPreference {
             key = Keys.lang
             titleRes = R.string.pref_language
-            entryValues = arrayOf("", "ar", "bg", "bn", "de", "en-US", "en-GB", "es", "fr", "hi",
-                    "hu", "in", "it", "ja", "ko", "lv", "ms", "nl", "pl", "pt", "pt-BR", "ro",
-                    "ru", "vi")
+            entryValues = arrayOf("", "ar", "bg", "bn", "ca", "cs", "de", "el", "en-US", "en-GB",
+            "es", "fr", "hi", "hu", "in", "it", "ja", "ko", "lv", "ms", "nb-rNO", "nl", "pl", "pt",
+            "pt-BR", "ro", "ru", "sc", "sr", "sv", "th", "tl", "tr", "uk", "vi", "zh-rCN")
             entries = entryValues.map { value ->
                 val locale = LocaleHelper.getLocaleFromString(value.toString())
                 locale?.getDisplayName(locale)?.capitalize() ?:
@@ -52,8 +52,9 @@ class SettingsGeneralController : SettingsController() {
         intListPreference {
             key = Keys.theme
             titleRes = R.string.pref_theme
-            entriesRes = arrayOf(R.string.light_theme, R.string.dark_theme, R.string.amoled_theme)
-            entryValues = arrayOf("1", "2", "3")
+            entriesRes = arrayOf(R.string.light_theme, R.string.dark_theme,
+                    R.string.amoled_theme, R.string.darkblue_theme)
+            entryValues = arrayOf("1", "2", "3", "4")
             defaultValue = "1"
             summary = "%s"
 
@@ -157,6 +158,22 @@ class SettingsGeneralController : SettingsController() {
                         else
                             selectedCategories.joinToString { it.name }
                     }
+        }
+        intListPreference{
+            key = Keys.libraryUpdatePrioritization
+            titleRes = R.string.pref_library_update_prioritization
+            // The following arrays are to be lined up with the list rankingScheme in:
+            // ../../data/library/LibraryUpdateRanker.kt
+            entriesRes = arrayOf(
+                    R.string.action_sort_alpha,
+                    R.string.action_sort_last_updated
+            )
+            entryValues = arrayOf(
+                    "0",
+                    "1"
+            )
+            defaultValue = "0"
+            summaryRes = R.string.pref_library_update_prioritization_summary
         }
         intListPreference {
             key = Keys.defaultCategory

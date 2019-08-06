@@ -1,6 +1,6 @@
 | Build | Stable | Dev | Contribute | Contact |
 |-------|----------|---------|------------|---------|
-| [![Travis](https://img.shields.io/travis/inorichi/tachiyomi.svg)](https://travis-ci.org/inorichi/tachiyomi) | [![stable release](https://img.shields.io/github/release/inorichi/tachiyomi.svg?maxAge=3600&label=download%20(autoupdate%20included))](https://github.com/inorichi/tachiyomi/releases) | [![latest dev build](https://img.shields.io/badge/download-latest%20build-blue.svg)](http://tachiyomi.kanade.eu/latest) [![fdroid dev](https://img.shields.io/badge/autoupdate-wiki-blue.svg)](//github.com/inorichi/tachiyomi/wiki/F-Droid-for-dev-versions) | [![Translation status](https://hosted.weblate.org/widgets/tachiyomi/-/svg-badge.svg)](https://hosted.weblate.org/engage/tachiyomi/?utm_source=widget) | [![Discord](https://img.shields.io/discord/349436576037732353.svg)](https://discord.gg/tachiyomi) |
+| [![Travis](https://img.shields.io/travis/inorichi/tachiyomi.svg)](https://travis-ci.org/inorichi/tachiyomi) | [![stable release](https://img.shields.io/github/release/inorichi/tachiyomi.svg?maxAge=3600&label=download)](https://github.com/inorichi/tachiyomi/releases) | [![latest dev build](https://img.shields.io/badge/download-latest%20build-blue.svg)](http://tachiyomi.kanade.eu/latest) | [![Translation status](https://hosted.weblate.org/widgets/tachiyomi/-/svg-badge.svg)](https://hosted.weblate.org/engage/tachiyomi/?utm_source=widget) | [![Discord](https://img.shields.io/discord/349436576037732353.svg)](https://discord.gg/tachiyomi) |
 
 
 # ![app icon](./.github/readme-images/app-icon.png)Tachiyomi
@@ -11,7 +11,7 @@ Tachiyomi is a free and open source manga reader for Android.
 ## Features
 
 Features include:
-* Online reading from sources such as KissManga, MangaFox, [and more](https://github.com/inorichi/tachiyomi-extensions)
+* Online reading from sources such as KissManga, MangaDex, [and more](https://github.com/inorichi/tachiyomi-extensions)
 * Local reading of downloaded manga
 * Configurable reader with multiple viewers, reading directions and other settings
 * [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), and [Kitsu](https://kitsu.io/explore/anime) support
@@ -23,7 +23,7 @@ Features include:
 ## Download
 Get the app from our [releases page](https://github.com/inorichi/tachiyomi/releases).
 
-If you want to try new features before they get to the stable release, you can download the dev version [here](http://tachiyomi.kanade.eu/latest) (auto-updates not included), or add our [F-Droid repo](https://github.com/inorichi/tachiyomi/wiki/F-Droid-for-dev-versions).
+If you want to try new features before they get to the stable release, you can download the dev version [here](http://tachiyomi.kanade.eu/latest).
 
 ## Issues, Feature Requests and Contributing
 
@@ -64,7 +64,7 @@ Catalogue requests should be created at https://github.com/inorichi/tachiyomi-ex
 ## FAQ
 
 [See our wiki.](https://github.com/inorichi/tachiyomi/wiki/FAQ)
-You can also reach out to us on [Discord](https://discord.gg/WrBkRk4).
+You can also reach out to us on [Discord](https://discord.gg/tachiyomi).
 
 ## License
 
